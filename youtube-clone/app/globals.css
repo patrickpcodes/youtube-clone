@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-light: #ffffff; /* White for light mode */
+    --background-dark: #000000; /* Black for dark mode */
+    --text-light: #ffffff; /* White text for dark mode */
+    --text-dark: #000000; /* Black text for light mode */
+
+    --blue-light: #4f83cc; /* Light mode blue */
+    --blue-dark: #1e3a8a; /* Dark mode blue */
+  }
+
+  body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+  }
+
+  .dark body {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+  }
+
+  .navbar {
+    background-color: var(--blue-light);
+  }
+
+  .dark .navbar {
+    background-color: var(--blue-dark);
+  }
+}
